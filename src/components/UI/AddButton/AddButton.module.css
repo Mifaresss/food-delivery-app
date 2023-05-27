@@ -1,0 +1,10 @@
+.addButton {
+	padding: 5px 10px;
+	max-width: max-content;
+	border: 1px solid rgb(var(--main-text-c));
+	border-radius: 5px;
+	transition: background-color .2s;
+}
+.addButton:hover {
+	background-color: #FFD98D;
+}

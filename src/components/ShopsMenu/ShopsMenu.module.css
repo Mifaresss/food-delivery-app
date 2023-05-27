@@ -1,0 +1,12 @@
+.shopsMenu {
+	position: sticky;
+	width: 100%;
+	top: 0.625rem;
+	height: min-content;
+	padding: 1.25rem;
+	border: 0.125rem solid #FFB042;
+	border-radius: 0.625rem;
+}
+.title {
+	
+}

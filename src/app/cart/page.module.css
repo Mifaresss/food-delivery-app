@@ -1,0 +1,8 @@
+.cartPageContainer {
+	margin-top: 3.125rem;
+}
+.mainContentWrapper {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 10px;
+}

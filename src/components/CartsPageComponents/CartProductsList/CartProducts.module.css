@@ -1,0 +1,10 @@
+.productsList {
+	padding: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	border: 4px dashed orange;
+	border-radius: 10px;
+	width: 100%;
+	height: max-content;
+}
