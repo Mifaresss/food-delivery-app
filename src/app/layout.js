@@ -1,4 +1,3 @@
-'use client'
 import { Header } from '@/components/Header/Header'
 import { Provider } from 'react-redux'
 import './globals.css'
