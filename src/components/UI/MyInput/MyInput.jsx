@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import s from './MyInput.module.css'
 
 export function MyInput({ type, name, placeholder, title }) {
@@ -9,11 +9,16 @@ export function MyInput({ type, name, placeholder, title }) {
 	if (type == 'text') pattern = '^[\\p{L}]{3,15}$'
 	if (name == 'address') pattern = '^.{15,50}$'
 
-	const [value, setValue] = useState(typeof window !== undefined ? localStorage.getItem(name) : '')
-	
+	const [value, setValue] = useState('')
+
+	useEffect(() => {
+		setValue(localStorage.getItem(name) || '')
+	}, [])
+
 	function updateUserData(e) {
-		localStorage.setItem(name, e.target.value)
 		setValue(e.target.value)
+		if (!localStorage) return
+		localStorage.setItem(name, e.target.value)
 	}
 
 	return (

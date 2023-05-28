@@ -1,3 +1,4 @@
+'use client'
 import s from './SubTiitle.module.css'
 
 export function SubTitle({children}) {

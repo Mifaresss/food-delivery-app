@@ -1,3 +1,4 @@
+'use client'
 import { AddButton } from '../UI/AddButton/AddButton'
 import { ProductPrice } from '../UI/ProductPrice/ProductPrice'
 import s from './ProductCard.module.css'

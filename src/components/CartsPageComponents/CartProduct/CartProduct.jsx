@@ -1,3 +1,4 @@
+'use client'
 import { ProductPrice } from '@/components/UI/ProductPrice/ProductPrice'
 import { removeCardFromCart, setNewPrice } from '@/store/cards/cardsSlice'
 import { useState } from 'react'

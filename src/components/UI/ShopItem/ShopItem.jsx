@@ -1,8 +1,9 @@
-import { useDispatch, useSelector } from 'react-redux'
-import s from './ShopItem.module.css'
+'use client'
 import { setRequiredCards } from '@/store/cards/cardsSlice'
+import { useDispatch } from 'react-redux'
+import s from './ShopItem.module.css'
 
-export function ShopItem({idList, children}) {
+export function ShopItem({ idList, children }) {
 
 	const dispatch = useDispatch()
 	function setRequiredCardsLocal() {

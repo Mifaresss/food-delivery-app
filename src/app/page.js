@@ -1,3 +1,4 @@
+'use client'
 import { ProductsList } from '@/components/ProductsList/ProductsList'
 import { ShopsMenu } from '@/components/ShopsMenu/ShopsMenu'
 import s from './page.module.css'

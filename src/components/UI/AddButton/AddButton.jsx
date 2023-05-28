@@ -1,3 +1,4 @@
+'use client'
 import { setCardsToCart } from '@/store/cards/cardsSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import s from './AddButton.module.css'

@@ -1,11 +1,11 @@
 'use client'
+import { fetchShops } from '@/store/shops/shopsSlice'
+import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import ShopsList from '../ShopsList/ShopsList'
 import { ShopItem } from '../UI/ShopItem/ShopItem'
 import { SubTitle } from '../UI/SubTitle/SubTitle'
 import s from './ShopsMenu.module.css'
-import { fetchShops } from '@/store/shops/shopsSlice'
-import { useEffect } from 'react'
 
 export function ShopsMenu() {
 
@@ -20,10 +20,10 @@ export function ShopsMenu() {
 			<SubTitle>Shops</SubTitle>
 			{shops.length ?
 				<ShopsList>
-				{shops.map(shop => <ShopItem key={shop._id} idList={shop.productsIdList}>{shop.name}</ShopItem>)}
+					{shops.map(shop => <ShopItem key={shop._id} idList={shop.productsIdList}>{shop.name}</ShopItem>)}
 				</ShopsList>
 				:
-				<p style={{ marginTop: '.7rem'}}>Loading...</p>
+				<p style={{ marginTop: '.7rem' }}>Loading...</p>
 			}
 		</aside>
 	)

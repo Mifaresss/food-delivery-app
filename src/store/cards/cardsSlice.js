@@ -8,6 +8,7 @@ export const fetchCards = createAsyncThunk('cards/fetchCards', async function ()
 })
 
 const saveCartToLocalStorage = cart => {
+   if (!localStorage) return
    localStorage.setItem('cart', JSON.stringify(cart))
 }
 
@@ -16,7 +17,7 @@ const cardsSlice = createSlice({
    initialState: {
       originalCards: [],
       filteredCards: [],
-      cartCards: JSON.parse(localStorage.getItem('cart')) || [],
+      cartCards: [],
    },
    reducers: {
       setRequiredCards(state, action) {
@@ -55,11 +56,6 @@ const cardsSlice = createSlice({
       })
    },
 })
-
-const savedCart = localStorage.getItem('cart')
-if (savedCart) {
-   cardsSlice.reducer({ cartCards: JSON.parse(savedCart) }, {})
-}
 
 export const { setRequiredCards, setCardsToCart, removeCardFromCart, setNewPrice } = cardsSlice.actions
 export default cardsSlice.reducer

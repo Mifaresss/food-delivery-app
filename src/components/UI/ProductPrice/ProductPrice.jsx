@@ -1,3 +1,4 @@
+'use client'
 import s from './ProductPrice.module.css'
 
 export function ProductPrice({price}) {
