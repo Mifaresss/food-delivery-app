@@ -10,8 +10,8 @@ export function CartProductsList() {
 	const productsRedux = useSelector(state => state.cards.cartCards)
 	useEffect(() => {
 		const localStorageProducts = JSON.parse(localStorage.getItem('cart'))
-		if (productsRedux.length >= localStorageProducts?.length) {
-			setProducts(JSON.parse(localStorage.getItem('cart')))
+		if (localStorageProducts?.length) {
+			setProducts(localStorageProducts)
 		} else {
 			setProducts(productsRedux)
 		}
