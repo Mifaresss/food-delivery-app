@@ -9,7 +9,7 @@ export function MyInput({ type, name, placeholder, title }) {
 	if (type == 'text') pattern = '^[\\p{L}]{3,15}$'
 	if (name == 'address') pattern = '^.{15,50}$'
 
-	const [value, setValue] = useState(localStorage.getItem(name) || '')
+	const [value, setValue] = useState(typeof window !== undefined ? localStorage.getItem(name) : '')
 	
 	function updateUserData(e) {
 		localStorage.setItem(name, e.target.value)
