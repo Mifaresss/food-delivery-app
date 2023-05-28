@@ -11,13 +11,20 @@ const saveCartToLocalStorage = cart => {
    if (!localStorage) return
    localStorage.setItem('cart', JSON.stringify(cart))
 }
+const getInitialCartCards = () => {
+   if (typeof window !== 'undefined') {
+      const storedCart = localStorage?.getItem('cart')
+      return storedCart ? JSON.parse(storedCart) : []
+   }
+   return []
+}
 
 const cardsSlice = createSlice({
    name: 'cards',
    initialState: {
       originalCards: [],
       filteredCards: [],
-      cartCards: [],
+      cartCards: getInitialCartCards() || [],
    },
    reducers: {
       setRequiredCards(state, action) {
