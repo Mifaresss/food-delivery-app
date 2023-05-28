@@ -1,3 +1,4 @@
+'use client'
 import { CartProductsList } from '@/components/CartsPageComponents/CartProductsList/CartProductsList'
 import { OrderForm } from '@/components/CartsPageComponents/OrderForm/OrderForm'
 import { TotalPrice } from '@/components/CartsPageComponents/TotalPrice/TotalPrice'

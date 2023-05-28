@@ -1,3 +1,4 @@
+'use client'
 import { useState } from 'react'
 import s from './MyInput.module.css'
 
@@ -9,7 +10,7 @@ export function MyInput({ type, name, placeholder, title }) {
 	if (name == 'address') pattern = '^.{15,50}$'
 
 	const [value, setValue] = useState(localStorage.getItem(name) || '')
-
+	
 	function updateUserData(e) {
 		localStorage.setItem(name, e.target.value)
 		setValue(e.target.value)
