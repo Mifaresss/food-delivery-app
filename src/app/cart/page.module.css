@@ -1,8 +1,12 @@
 .cartPageContainer {
-	margin-top: 3.125rem;
+	margin-top: 7rem;
 }
 .mainContentWrapper {
-	display: flex;
+	display: grid;
+	grid-template-columns: 65% 30%;
 	justify-content: space-between;
-	margin-bottom: 10px;
+}
+.productsSectionWrapper {
+	width: 100%;
+	height: max-content;
 }

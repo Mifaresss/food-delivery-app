@@ -9,11 +9,11 @@ import s from './ShopsMenu.module.css'
 
 export function ShopsMenu() {
 
-	const dispatch = useDispatch()
+	// const dispatch = useDispatch()
 	const shops = useSelector(state => state.shops.shops)
-	useEffect(() => {
-		dispatch(fetchShops())
-	}, [])
+	// useEffect(() => {
+	// 	dispatch(fetchShops())
+	// }, [])
 
 	return (
 		<aside className={s.shopsMenu}>

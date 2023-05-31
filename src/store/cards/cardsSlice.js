@@ -1,30 +1,32 @@
+import { data } from '@/DATA'
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
-export const fetchCards = createAsyncThunk('cards/fetchCards', async function () {
-   const response = await fetch('http://localhost:5000/stores')
-   const data = await response.json()
-   const cards = data.flatMap(shop => shop.products)
-   return cards
-})
+// export const fetchCards = createAsyncThunk('cards/fetchCards', async function () {
+//    const response = await fetch('http://localhost:5000/stores')
+//    const data = await response.json()
+//    const cards = data.flatMap(shop => shop.products)
+//    return cards
+// })
+const cards = data.flatMap(shop => shop.products)
 
 const saveCartToLocalStorage = cart => {
    if (!localStorage) return
    localStorage.setItem('cart', JSON.stringify(cart))
 }
-const getInitialCartCards = () => {
-   if (typeof window !== 'undefined') {
-      const storedCart = localStorage?.getItem('cart')
-      return storedCart ? JSON.parse(storedCart) : []
-   }
-   return []
-}
+// const getInitialCartCards = () => {
+//    if (typeof window !== 'undefined') {
+//       const storedCart = localStorage?.getItem('cart')
+//       return storedCart ? JSON.parse(storedCart) : []
+//    }
+//    return []
+// }
 
 const cardsSlice = createSlice({
    name: 'cards',
    initialState: {
-      originalCards: [],
-      filteredCards: [],
-      cartCards: getInitialCartCards() || [],
+      originalCards: cards,
+      filteredCards: cards,
+      cartCards: JSON.parse(localStorage.getItem('cart')) || [],
    },
    reducers: {
       setRequiredCards(state, action) {
@@ -51,17 +53,17 @@ const cardsSlice = createSlice({
          saveCartToLocalStorage(state.cartCards)
       },
    },
-   extraReducers: builder => {
-      builder.addCase(fetchCards.pending, state => {
-         state.status = 'pending'
-      })
-      builder.addCase(fetchCards.fulfilled, (state, action) => {
-         state.status = 'resolved'
-         state.originalCards = action.payload
-         state.filteredCards = action.payload
-         saveCartToLocalStorage(state.cartCards)
-      })
-   },
+   // extraReducers: builder => {
+   //    builder.addCase(fetchCards.pending, state => {
+   //       state.status = 'pending'
+   //    })
+   //    builder.addCase(fetchCards.fulfilled, (state, action) => {
+   //       state.status = 'resolved'
+   //       state.originalCards = action.payload
+   //       state.filteredCards = action.payload
+   //       saveCartToLocalStorage(state.cartCards)
+   //    })
+   // },
 })
 
 export const { setRequiredCards, setCardsToCart, removeCardFromCart, setNewPrice } = cardsSlice.actions

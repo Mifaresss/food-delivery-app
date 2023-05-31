@@ -10,5 +10,5 @@
 	margin-bottom: 0;
 }
 .shopItem:hover {
-	background-color: #FFD98D;
+	background-color: rgba(var(--border-c), .5);
 }

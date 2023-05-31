@@ -1,5 +1,6 @@
 :root {
 	--main-text-c: 20,20,20;
+   --border-c: 255, 176, 66
 }
 
 body {
