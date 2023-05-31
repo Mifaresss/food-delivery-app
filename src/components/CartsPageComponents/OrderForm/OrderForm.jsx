@@ -17,26 +17,26 @@ export function OrderForm() {
 		}, {})
 		orderData.products = cartCards.map(card => [card._id, card.amount])
 		orderData.totalPrice = totalPrice
-		fetch('http://localhost:5000/order', {
-			method: 'POST',
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(orderData)
-		})
-			.then(response => {
-				if (response.ok) {
-					return response.json()
-				} else {
-					console.error('Ошибка при отправке заказа')
-				}
-			})
-			.then(data => {
-				alert(data)
-			})
-			.catch(error => {
-				console.error('Ошибка при выполнении запроса', error.message)
-			})
+		fetch('https://backend-food-delivery-app.herokuapp.com/order', {
+         method: 'POST',
+         headers: {
+            'Content-Type': 'application/json',
+         },
+         body: JSON.stringify(orderData),
+      })
+         .then(response => {
+            if (response.ok) {
+               return response.json()
+            } else {
+               console.error('Ошибка при отправке заказа')
+            }
+         })
+         .then(data => {
+            alert(data)
+         })
+         .catch(error => {
+            console.error('Ошибка при выполнении запроса', error.message)
+         })
 	}
 
 	return (

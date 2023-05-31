@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 export const fetchShops = createAsyncThunk('shops/fetchShops', async function () {
-	const response = await fetch('http://localhost:5000/stores')
+	const response = await fetch('https://backend-food-delivery-app.herokuapp.com/stores')
 	const data = await response.json()
 	const shops = data.map(shop => ({
 		_id: shop._id,
