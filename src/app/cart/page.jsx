@@ -7,12 +7,14 @@ import s from './page.module.css'
 export default function cart() {
 
 	return (
-		<div className={s.cartPageContainer}>
-			<div className={s.mainContentWrapper}>
-				<OrderForm />
-				<CartProductsList />
-			</div>
-			<TotalPrice />
-		</div>
-	)
+      <div className={s.cartPageContainer}>
+         <div className={s.mainContentWrapper}>
+            <OrderForm />
+            <div className={s.productsSectionWrapper}>
+               <CartProductsList />
+               <TotalPrice />
+            </div>
+         </div>
+      </div>
+   )
 }
