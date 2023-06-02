@@ -1,0 +1,11 @@
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-right: 50px;
+}
+.submitButton {
+	padding: 10px 15px;
+	border: 2px solid rgb(var(--main-text-c));
+	border-radius: 5px;
+}

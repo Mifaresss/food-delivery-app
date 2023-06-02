@@ -1,5 +1,6 @@
 :root {
 	--main-text-c: 20,20,20;
+   --border-c: 255, 176, 66
 }
 
 body {
@@ -11,4 +12,36 @@ body {
    margin: 0 auto;
    max-width: 68.75rem;
    padding: 0 0.9375rem;
+}
+
+
+
+/* ================================== Link ================================== */
+.myLink {
+   position: relative;
+   transition: color 0.3s;
+   color: #FFE960;
+   font-size: 1.2rem;
+}
+.myLink::after {
+   content: '';
+   background-color: currentColor;
+   position: absolute;
+   transition: width 0.2s;
+   bottom: -2px;
+   left: 0;
+   right: 0;
+   margin: auto;
+   width: 0%;
+   height: 6%;
+}
+.myLink:hover:after {
+   width: 100%;
+}
+/* ============================== Active Link ============================== */
+.myLink.active {
+   color: white;
+}
+.myLink.active:hover:after {
+   display: none;
 }
