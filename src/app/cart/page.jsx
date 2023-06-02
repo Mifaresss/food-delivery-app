@@ -1,10 +1,10 @@
 'use client'
 import { CartProductsList } from '@/components/CartsPageComponents/CartProductsList'
+import { OrderForm } from '@/components/CartsPageComponents/OrderForm'
 import { TotalPrice } from '@/components/CartsPageComponents/TotalPrice'
 import { store } from '@/store'
 import { Provider } from 'react-redux'
 import s from './page.module.css'
-import { OrderFormOld } from '@/components/CartsPageComponents/OrderFormOld/OrderFormOld'
 
 export default function cart() {
    return (
@@ -15,7 +15,7 @@ export default function cart() {
                   <CartProductsList />
                   <TotalPrice />
                </div>
-               <OrderFormOld />
+               <OrderForm />
             </div>
          </div>
       </Provider>

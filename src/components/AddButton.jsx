@@ -1,5 +1,5 @@
 'use client'
-import { setCardsToCart } from '@/store/cardsSlice'
+import { setCardsToCart } from '@/store/CardsSlice'
 import { Button } from '@mui/material'
 import { useDispatch, useSelector } from 'react-redux'
 

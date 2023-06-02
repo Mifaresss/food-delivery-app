@@ -1,5 +1,5 @@
 'use client'
-import { fetchShops } from '@/store/shopsSlice'
+import { fetchShops } from '@/store/ShopsSlice'
 import { Box, CircularProgress, List, Typography } from '@mui/material'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'

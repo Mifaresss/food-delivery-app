@@ -1,5 +1,5 @@
 'use client'
-import { fetchCards } from '@/store/cardsSlice'
+import { fetchCards } from '@/store/CardsSlice'
 import { CircularProgress, List } from '@mui/material'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
