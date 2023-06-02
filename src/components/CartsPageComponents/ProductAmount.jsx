@@ -1,4 +1,4 @@
-import { setNewPrice } from '@/store/CardsSlice'
+import { setNewPrice } from '@/store/cardsSlice'
 import { TextField } from '@mui/material'
 import { useDispatch } from 'react-redux'
 

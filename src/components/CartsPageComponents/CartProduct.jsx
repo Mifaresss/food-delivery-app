@@ -1,6 +1,6 @@
 'use client'
 import { ProductPrice } from '@/components/ProductPrice'
-import { removeCardFromCart } from '@/store/CardsSlice'
+import { removeCardFromCart } from '@/store/cardsSlice'
 import { Button, TableCell, TableRow } from '@mui/material'
 import { useDispatch } from 'react-redux'
 import { ProductAmount } from './ProductAmount'

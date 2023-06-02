@@ -1,5 +1,5 @@
 'use client'
-import { setRequiredCards } from '@/store/CardsSlice'
+import { setRequiredCards } from '@/store/cardsSlice'
 import { ListItemButton, ListItemText } from '@mui/material'
 import { useDispatch } from 'react-redux'
 
