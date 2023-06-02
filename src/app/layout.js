@@ -1,13 +1,24 @@
 'use client'
-import { Header } from '@/components/Header/Header'
+import { Header } from '@/components/Header'
 import { ThemeProvider } from '@emotion/react'
+import { createTheme } from '@mui/material'
 import './globals.css'
 import './reset.css'
-import { createTheme } from '@mui/material'
 
 const theme = createTheme({
    typography: {
       fontFamily: 'system-ui',
+   },
+   palette: {
+      primary: {
+         main: '#530c32',
+      },
+      secondary: {
+         main: '#FF8C8E',
+      },
+      header: {
+         main: '#4a313e',
+      },
    },
 })
 
