@@ -14,6 +14,7 @@ export function ShopsMenu() {
 
    return (
       <Box
+         className='shopsList'
          component='aside'
          border={2}
          borderColor='primary.main'
@@ -25,6 +26,7 @@ export function ShopsMenu() {
             padding: '13px 18px 18px 18px',
          }}
       >
+      {/* // <aside className='shopsList'> */}
          <Typography variant='h4' component='h2' fontWeight={500} marginBottom={1}>
             Shops
          </Typography>
@@ -44,6 +46,7 @@ export function ShopsMenu() {
                <CircularProgress color='inherit' />
             )}
          </List>
+      {/* // </aside> */}
       </Box>
    )
 }

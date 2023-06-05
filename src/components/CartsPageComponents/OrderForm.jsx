@@ -52,7 +52,7 @@ export function OrderForm() {
    }
 
    return (
-      <form onSubmit={handleSubmit(onSubmit)} style={{ position: 'sticky', top: '85px', height: 'max-content' }} autoComplete='on'>
+      <form className='form' onSubmit={handleSubmit(onSubmit)} style={{ position: 'sticky', top: '85px', height: 'max-content' }} autoComplete='on'>
          <Stack spacing={1.5}>
             <MyInput register={register} type='text' name='name' placeholder='Name' errors={errors} />
             <MyInput register={register} type='email' name='email' placeholder='email@domain.etc' errors={errors} />

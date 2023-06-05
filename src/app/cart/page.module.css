@@ -21,3 +21,11 @@
 	flex-direction: column;
 	gap: 10px;
 }
+
+@media (max-width: 800px) {
+	.mainContentWrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+}
