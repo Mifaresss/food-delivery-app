@@ -51,11 +51,11 @@ body {
 }
 @media (max-width: 800px) {
    .shopsList {
-      padding: 10px;
+      padding: 10px !important;
       z-index: 1;
       backdrop-filter: blur(0.4rem);
-      border: none;
-      top: 70px;
+      border: none !important;
+      top: 70px !important;
    }
    .shopsList ul {
       flex-direction: row;
